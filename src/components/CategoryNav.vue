@@ -1,6 +1,6 @@
 <template>
   <view class="category-nav">
-    <scroll-view scroll-x class="nav-scroll">
+    <scroll-view scroll-y class="nav-scroll">
       <view class="nav-items">
         <view 
           v-for="category in categories" 
@@ -19,6 +19,7 @@
 <script setup>
 import { ref } from 'vue';
 import categoryMap from '../categoryConfig.json';
+import SafetyCheck from './SafetyCheck.vue';
 
 const props = defineProps({
   categories: {
@@ -35,60 +36,49 @@ const getCategoryName = (category) => {
 
 const handleCategoryClick = (category) => {
   activeCategory.value = category;
-  const element = document.querySelector(`[data-category="${category}"]`);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+  const categoryElement = document.querySelector(`[data-category='${category}']`);
+  if (categoryElement) {
+    // 平滑滚动到目标元素并向下偏移 80px
+    categoryElement.scrollIntoView({ behavior: 'smooth' });
   }
 };
 </script>
 
 <style lang="scss">
 .category-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 16px;
-  
+  width: 100%;
+  height: calc(100vh - 32px);
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-sizing: border-box;
   .nav-scroll {
-    width: 100%;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    height: 100%;
+    overflow-y: auto;
   }
-  
   .nav-items {
-    display: inline-flex;
-    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
-  
   .nav-item {
-    padding: 6px 16px;
-    margin-right: 12px;
-    border-radius: 16px;
-    font-size: 14px;
-    color: #666;
-    background-color: #f5f7fa;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 12px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:last-child {
-      margin-right: 0;
-    }
-    
+    color: #333;
+    font-size: 16px;
+    transition: background 0.2s;
     &:hover {
-      background-color: #e8f3ff;
-      color: #1989fa;
+      background: #e6f7ff;
     }
-    
     &.active {
-      background-color: #1989fa;
-      color: #fff;
+      background: #bae7ff;
+      color: #1890ff;
+      font-weight: bold;
     }
   }
 }

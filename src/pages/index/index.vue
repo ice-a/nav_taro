@@ -1,20 +1,22 @@
 <template>
+  <view><Title /></view>
   <view class="index">
-    <view class="header">
-      <text class="title">导航站</text>
-      <category-nav :categories="categories" />
-    </view>
     
-    <view class="content">
-      <category-section 
-        v-for="category in categories" 
-        :key="category" 
-        :category="category" 
-        :items="getItemsByCategory(category)" 
-        :data-category="category"
-      />
+    <view class="main-layout">
+      <view class="nav-side">
+        <category-nav :categories="categories" />
+      </view>
+      <view class="gap"></view>
+      <view class="section-container">
+        <category-section 
+          v-for="category in categories" 
+          :key="category" 
+          :category="category" 
+          :items="getItemsByCategory(category)" 
+          :data-category="category"
+        />
+      </view>
     </view>
-    
     <back-to-top />
     <nut-toast v-model:visible="show" :msg="toastMsg" />
   </view>
@@ -26,6 +28,7 @@ import CategorySection from '../../components/CategorySection.vue';
 import CategoryNav from '../../components/CategoryNav.vue';
 import BackToTop from '../../components/BackToTop.vue';
 import navConfig from '../../tools.json';
+import Title from '../../components/Title.vue';
 
 const show = ref(false);
 const toastMsg = ref('');
@@ -67,26 +70,51 @@ const showToast = (msg) => {
 
 <style lang="scss">
 .index {
-  padding: 16px;
-  background-color: #f5f7fa;
-  min-height: 100vh;
-  
-  .header {
-    margin-bottom: 20px;
-    padding: 16px 0;
-    text-align: center;
-    
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-    }
+  padding: 0 16px;
+  // background-color: #f5f7fa;
+  min-height: 200vh;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 16px 0;
+  text-align: center;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
   }
-  
-  .content {
-    padding-bottom: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+}
+.main-layout {
+  display: flex;
+  top: 500px;
+  flex-direction: row;
+  height: 5%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  // min-height: 100vh;
+  margin-top: 5vh; // 增加顶部间距以避免与标题重叠
+}
+.nav-side {
+  width: 20%;
+  min-width: 180px;
+  background: #f8f9fa;
+  padding: 16px 8px 16px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+.gap {
+  width: 5%;
+}
+.section-container {
+  width: 60%;
+  min-width: 300px;
+  margin-top: 10%;
 }
 </style>

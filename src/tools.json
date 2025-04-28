@@ -90,6 +90,12 @@
     "desc": "统计"
   },
   {
+    "name": "docker自建加速",
+    "url": "https://docker.020417.xyz",
+    "catelog": "个人站",
+    "desc": "docker自建加速"
+  },
+  {
     "name": "docker加速",
     "url": "https://github.com/dongyubin/DockerHub",
     "catelog": "工具",
@@ -97,7 +103,7 @@
   },
   {
     "name": "图片格式转换",
-    "url": "https://img.lideshan.cn/",
+    "url": "https://pic.020417.xyz/",
     "catelog": "个人站",
     "desc": "tools"
   },
@@ -115,27 +121,39 @@
   },
   {
     "name": "一个搜索工具",
-    "url": "https://search.lideshan.top/",
+    "url": "https://search.020417.xyz/",
     "catelog": "个人站",
     "desc": "Search"
   },
   {
-    "name": "一个融合了很多的工具",
-    "url": "https://tools.lideshan.top/",
-    "catelog": "个人站",
-    "desc": "tolls"
-  },
-  {
     "name": "开发者备忘录",
-    "url": "https://dev.lideshan.top/",
+    "url": "https://dev.020417.xyz/",
     "catelog": "个人站",
     "desc": "tolls"
   },
   {
     "name": "linux命令查询",
-    "url": "https://bash.lideshan.top/",
+    "url": "https://linux.020417.xyz/",
     "catelog": "个人站",
     "desc": "tolls"
+  },
+  {
+    "name": "proxy代理访问外网",
+    "url": "https://proxy.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "tolls"
+  },
+  {
+    "name": "Hot热门榜单",
+    "url": "https://hot.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "Hot热门榜单"
+  },
+  {
+    "name": "微信聊天记录生成",
+    "url": "https://wx.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "微信聊天记录生成"
   },
   {
     "name": "爱锭网",
@@ -988,6 +1006,12 @@
     "url": "http://tool.chacuo.net/cryptdes",
     "catelog": "在线工具",
     "desc": "在线 DES、3DES、AES、RC2、RC4、RC5、RC6、RSA 等加解密。"
+  },
+  {
+    "name": "Ip定位",
+    "url": "https://ip.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "IP 地址查询 API"
   },
   {
     "name": "httpbin",
@@ -2707,9 +2731,21 @@
   },
   {
     "name": "吃什么",
-    "url": "https://eat.lideshan.top/",
+    "url": "https://eat.020417.xyz/",
     "catelog": "个人站",
     "desc": "娱乐"
+  },
+  {
+    "name": "实时新闻",
+    "url": "https://new.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "实时新闻"
+  },
+  {
+    "name": "微信公众号文章排版",
+    "url": "https://md.020417.xyz/",
+    "catelog": "个人站",
+    "desc": "微信公众号文章排版"
   },
   {
     "name": "Alist网盘",
@@ -2947,33 +2983,21 @@
   },
   {
     "name": "地址生成器",
-    "url": "https://address.yrx.us.kg/",
+    "url": "https://ad.020417.xyz/",
     "catelog": "个人站",
     "desc": "生成虚拟地址"
   },
   {
-    "name": "特别干净的搜索",
-    "url": "https://search.yrx.us.kg/",
+    "name": "短链接生成",
+    "url": "https://l.020417.xyz/",
     "catelog": "个人站",
-    "desc": "特别干净的搜索"
+    "desc": "短链接生成"
   },
   {
-    "name": "在线视频",
-    "url": "https://video.yrx.us.kg/",
+    "name": "人生模拟器",
+    "url": "https://life.020417.xyz/",
     "catelog": "个人站",
-    "desc": "在线视频"
-  },
-  {
-    "name": "AI的api服务",
-    "url": "https://api.yrx.us.kg/",
-    "catelog": "个人站",
-    "desc": "AI的api服务"
-  },
-  {
-    "name": "图片处理",
-    "url": "https://pic.yrx.us.kg/",
-    "catelog": "个人站",
-    "desc": "图片处理"
+    "desc": "人生模拟器"
   },
   {
     "name": "猿人学练习平台",

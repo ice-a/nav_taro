@@ -39,7 +39,8 @@ const categoryName = computed(() => {
 <style lang="scss">
 .category-section {
   margin-bottom: 24px;
-  
+  width: 100%;
+  margin-top: 15%;
   .category-title {
     font-size: 18px;
     font-weight: bold;
@@ -47,14 +48,14 @@ const categoryName = computed(() => {
     margin-bottom: 12px;
     padding-left: 8px;
     border-left: 4px solid #1989fa;
+    margin-top: 10%;
   }
-  
   .category-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 16px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
